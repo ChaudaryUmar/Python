@@ -1,0 +1,402 @@
+#Programmar Chaudary Umar
+#4.13
+
+km = float(raw_input("Enter Kilometer Driven:"))
+Lit = float(raw_input("Enter Liter Used:"))
+while(km!=-1):
+     avg = km/Lit
+    print("Kms per liter this trip:{}".format(avg))
+    print("Total kms per liter:{}".format(avg))
+    break
+
+#4.14
+a=int(raw_input("Enter the Account Number(-1 to quite):"))
+b=int(raw_input("Enter the Beginning Balance:"))
+c=int(raw_input("Enter Total Charges:"))
+d=int(raw_input("Enter Total Credits:"))
+e=int(raw_input("Enter Credits Limit:"))
+while(a!= -1):
+    blnce = int(b + c) -int(d)
+    print("New Balance is:{} ".format(blnce))
+    print("Account Number is:{} ".format(a))
+    print("Credit Limit is:{} ".format(e))
+    break
+if(e< blnce):
+    print("Credit Limit Exceeded")
+    a=input("Enter the Account Number(-1 to quite):")
+
+
+#4.15
+
+a=int(raw_input("Enter the Sales(-1 to Quite):"))
+while(a!=-1):
+    salary = a / 100 * 9
+    salary1 =salary + 200
+    print("Your Salary is:{}".format(salary1))
+    break
+
+
+#4.16
+
+a=int(raw_input("Enter Worked Hours(-1 to Quite): "))
+b=int(raw_input("Enter Hourly rate of the Employee:"))
+while(a!= -1):
+    salary= a * b
+    print("Your Total Salary is:{} ".format(salary))
+    break
+
+
+#4.17
+
+count=1
+a=int(raw_input("Enter Ten Numbers: "))
+fmax=0
+smax=0
+tmax=0
+while(count<10):
+    a = int(raw_input("Enter Ten Numbers: "))
+    count+=1
+    if(fmax<a):
+        tmax=smax
+        smax=fmax
+        fmax=a
+    elif(tmax<a):
+        tmax=smax
+        smax=a
+    elif(smax<a):
+        tmax=a
+count
+print("First Maximum Number is:{} ".format(fmax))
+print("Second Maximum Number is:{} ".format(smax))
+print("Third Maximum Number is:{} ".format(tmax))
+
+
+
+
+#4.18
+
+count=0
+print(" N"+" 10*N"+" 100*N"+" 1000*N")
+while(count<5):
+    count += 1
+    print(" {} ".format(count)+" {} ".format(10*count)+" {} ".format(100*count)+" {} ".format(1000*count))
+
+
+#4.19
+
+count = 1
+a=int(raw_input("Enter Ten Numbers: "))
+fmax=0
+smax=0
+while(count<10):
+    a = input("Enter Ten Numbers: ")
+    count += 1
+    if(fmax<a):
+        smax=fmax
+        fmax=a
+    elif(smax<a):
+        smax=a
+print("First Maximum Number is:{}".format(fmax))
+print("Second Maximum Number is:{}".format(smax))
+
+
+#4.20
+passstd=0
+failstd=0
+std=1
+a=int(raw_input("Enter Result(1=Pass , 2=fail): "))
+while(std<10):
+    a =int(raw_input("Enter Result(1=Pass , 2=fail): "))
+    std+=1
+    if(int(a)==1):
+        passstd += 1
+    elif(int(a)==2):
+        failstd += 1
+    else:
+        print("Invalid result!")
+        print("Pass Students:{} ".format(passstd))
+        print("Fail Students:{} ".format(failstd))
+
+        if(passstd>8):
+         print("Bonus to Instructor")
+
+
+#4.28
+r=1
+c=1
+while(r+1<=8):
+    if(r%2==0):
+     print(" ")
+     break
+    while(c+1<=8):
+        print("*")
+        break
+
+
+#4.30
+pi=3.14159
+a=raw_input("Enter radius of circle: ")
+d=a*2
+circumference=2*pi*int(a)
+area=pi*int(a)*int(a)
+print("Diameter is={}".format(d))
+print("Circumference is={}".format(circumference))
+print("Area is={}".format(area))
+
+
+#4.32
+
+s1=input("Enter First Side of a trianle: ")
+s2=input("Enter Second Side of a trianle: ")
+s3=input("Enter Third Side of a trianle: ")
+if((s1<s2+s3) and (s2<s1+s3) and (s3<s1+s2)):
+    print("Yes. These three sides represent a triangle")
+else:
+    print("No. These three sides could not represent a triangle")
+
+
+#5.11
+nmbr = int(raw_input("Number of Values: "))
+smallest=nmbr
+    while(nmbr>0):
+      value = raw_input("Value: ")
+     if(value<smallest):
+       smallest=int(value)
+       nmbr=int(nmbr)-1
+        print("Smallest Value is:{} ".format(smallest))
+
+
+
+#5.12
+
+product=1
+for i in range(3,50):
+    i=i+3
+    product=float(product)*i
+    print("Product of Multiple 3 is: {}".format(product))
+
+#5.13
+
+nmbr=raw_input("Enter Number to Find Factorial: ")
+fact=1
+for i in range(1,int(nmbr)):
+    fact=fact*i
+    print("Facrorial of:{} ".format(nmbr)+" is:{} ".format(fact))
+
+#5.14
+
+principle=1000
+print("Year"+" 5%   "+" 6%   "+" 7%   "+" 8%   "+" 9%"+"   10%")
+for i in range(1,10):
+    i=i+1
+    for a in range(5,10):
+         a=a+1
+         amount=principle*(pow(1+a/100,i))
+         print(" {} ".format(i)+" {} ".format(amount)+" {} ".format(amount)+" {} ".format(amount)+" {} ".format(amount)+     " {} ".format(amount)+" {} ".format(amount))
+
+
+#5.15(a)
+
+for i in range(1,10):
+    i=i+1
+for j in range(1,i+1):
+    j=j+1
+     print("*",end="")
+     print()
+
+
+#5.15(b)
+
+for i in range(1,10,1):
+     for j in range(i,10,1):
+         print("*",end="")
+         print()
+#5.16
+
+nmbr=input("Enter Five Numbers Between 1 to 9: ")
+for i in range(1,5):
+    i=i+1
+if(int(nmbr)<1 or 9< int(nmbr)):
+    print("Number is out of Range")
+    else:
+        for j in range(1,2): j=j+i
+        for k in range(1,int(nmbr)):
+        k=k+1
+        print(str(k)+str(k))
+
+#5.17
+
+nmbr = 0
+total = 0.0
+while (nmbr! == -1):
+    nmbr = raw_input("Product Number 1-5: ")
+    qnt = raw_input("Quantity Sold: ")
+    if (nmbr >= 1 or nmbr<= 5):
+     continue
+      else:
+        print("Invalid Entry")
+if (nmbr == 1):
+    total = float(total) + int(qnt) * 2.98
+elif (nmbr == 2):
+    total = float(total) + int(qnt) * 4.50
+elif (nmbr == 3):
+    total = float(total) + int(qnt) * 9.98
+elif (nmbr == 4):
+    total = float(total) + int(qnt) * 4.49
+elif (nmbr == 5):
+    total = float(total) + int(qnt) * 6.87
+    print("Total Retail Value of All Product is:{} ".format(total))
+
+
+
+#5.20
+
+
+for hyp in range(1,500):
+    hyp+=1
+    for s1 in range(1,hyp):
+        s1+=1
+        for s2 in range(1,s1):
+            s2+=1
+            if(hyp*hyp==s1*s1 + s2*s2):
+             print("{}".format(hyp)+"{} ".format(s1)+"{} ".format(s2))
+
+
+
+#5.22
+
+
+x=1
+y=2
+a=3
+b=4
+if ( not (x<=6 and y%2==1)==( not(x<=6) or not(y%2==1))):
+    print(True)
+if ( not(a<4 or b>=6)==( not(a<4) or not(b>=6))):
+    print(True)
+if (( not(x<3) and not(y>=2))==(not(x<3) or (y>=2))):
+    print(True)
+if (( not(a==b) or not( not b==2))==(not(a==b and (not b==2)))):
+    print(True)
+
+
+#6.12
+
+
+print("Car's"+" "+"Hour's"+" "+"Charge's")
+def calculation():
+    if(int(hrs)<=3):
+        return int(hrs) * 20
+    elif(int(hrs)>3):
+        return int(hrs)*20+5
+def thrs(totalhrs=0):
+    return totalhrs+int(hrs)
+for car in range(0,3):
+    car+=1
+hrs=input(" ")
+print("{}".format(car) + "{} ".format(thrs()) + "{} ".format(calculation()))
+
+
+
+#6.13
+
+def rnd():
+    return int(nmbr) + 0.5
+        for i in range(1,5):
+          i+=1
+            nmbr = input("Enter Number: ")
+            print("Nearest integer for:{} ".format(i)+" is:{} ".format(rnd()))
+
+
+#6.14
+
+def rndtenth():
+    return (int(nmbr)*10 + 0.5)/10
+def rndhundred():
+    return (int(nmbr)*10 + 0.5)/100
+for i in range(1,5,1):
+    nmbr = input("Enter Number: ")
+    print("Nearest Tenth integer for{} ".format(i)+" is {} ".format(rndtenth()))
+    print("Nearest Hundred integer for{} ".format(i) + " is {} ".format(rndhundred()))
+
+
+
+#6.18
+
+value=1
+base=raw_input("Base : ")
+exp=raw_input("Exponent : ")
+def intgpower(base):
+    return pow(int(base),int(exp))
+print("Result is {}".format(intgpower(base)))
+
+
+#6.19
+
+
+def hyp(s1,s2):
+    return s1*s1+s2*s2
+print("{}".format(hyp(3,4)))
+print("{}".format(hyp(5,12)))
+print("{}".format(hyp(8,15)))
+
+#6.20
+
+a=int(raw_input("Enter First Number(0 to end): "))
+b=int(raw_input("Enter Second Number: "))
+def factor(n1,n2):
+    return not(n1%n2)
+while(True):
+    a = int(raw_input("Enter First Number(0 to end): "))
+    b = int(raw_input("Enter Second Number: "))
+    break
+if(not (a)):
+    print(bin)
+    print("{}".format(b)+" is not a Factor of {}".format(factor(int(a),int(b))))
+else:
+     print("{}".format(b)+" is Factor of {} ".format(factor(int(a),int(b))))
+
+#6.21
+
+a=int(raw_input("Integer number (0 to end): "))
+def multiple3(nmbr):
+    return not(nmbr%3)
+while(True):
+    a = int(raw_input("Integer number (0 to end): "))
+    if(not int(a)):
+        break
+        print("{}".format(a)+" is not Multiple of{} ".format(multiple3(int(a)))+ "{}".format(nmbr))
+    else:
+     print("{}".format(a) + " is Multiple of{} ".format(multiple3(int(a))))
+
+#6.22
+w=int(raw_input("Width: "))
+h=int(raw_input("Height: "))
+def display(w,h):
+    for i in range(0,h,1):
+        for j in range(0,w,1):
+             print("*")
+while(w>1 or h>1):
+    print("{}".format(display(int(w),int(h))))
+    break
+
+#6.24
+a=int(raw_input("Number (1 to 32767): "))
+d=1
+def seprate(n):
+    while(n/d):
+        return d*10
+        while(d>1):
+            print("{}".format((n%d)/(n/d)))
+            return d/10
+while(a<1 or a>32767):
+    a = int(raw_input("Number (1 to 32767): "))
+    print("{}".format(seprate(int(a)))+" ")
+
+#6.25
+m=int(raw_input("Enter Minutes: "))
+h=int(raw_input("Enter Hours: "))
+d=int(raw_input("Enter Days: "))
+def cal(m,h,d):
+    return m+h*60+d*360
+print("{}".format(cal(m,h,d)))
